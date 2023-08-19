@@ -1,0 +1,103 @@
+@import './variables';
+
+.bedget-label {
+  width: fit-content;
+  padding: 8px;
+  font-family: $noto_font;
+
+  &--red {
+    border-radius: 4px;
+    color: $base_white;
+    background-color: $red_color;
+  }
+
+  &--secondary {
+    color: #2B5C7D;
+    border: 2px solid #2B5C7D;
+    border-radius: 30px;
+    font-family: $mont_font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+// shared style to sections
+.tags-section,
+.social-accounts,
+.tabs,
+.about-details-email,
+.text-section,
+.about-details-advertisment {
+  width: 300px;
+  margin: 45px 0 40px 15px;
+
+  @include mobile {
+    margin: 32px auto;
+  }
+
+  @include tablet {
+    width: 80%;
+    margin: 30px 0 0 0px;
+  }
+
+  &_title {
+    font-family: $mont_font;
+    color: $base_black;
+    margin: 0 0 8px 4px;
+    font-size: 18px;
+  }
+}
+
+.head-title {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+// shared style for the most of  titles 
+.title {
+  position: relative;
+  font-size: 12px;
+  z-index: 5;
+  font-weight: 400;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #707070;
+  font-family: 'Montserrat';
+
+  &:before,
+  &:after {
+    position: absolute;
+    box-shadow: 0 0 3px $background;
+    top: 51%;
+    overflow: hidden;
+    width: 40%;
+    height: 3px;
+    content: '\a0';
+    background-color: $background;
+    margin-left: 1%;
+  }
+
+  &:before {
+    margin-left: -41%;
+    text-align: right;
+  }
+}
+
+.tags-section {
+  margin-bottom: 100px;
+
+  &-tags {
+    &__button {
+      border: 1px solid $border;
+      border-radius: 30px;
+      color: $base_black;
+      padding: 8px 16px;
+      margin: 8px;
+    }
+  }
+}

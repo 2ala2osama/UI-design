@@ -1,0 +1,19 @@
+{
+  "name": "atypon-task",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "scss": "node-sass style/scss/style.scss style/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alaa-alratrout",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "node-sass": "^8.0.0"
+  }
+}

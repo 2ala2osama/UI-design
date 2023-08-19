@@ -1,0 +1,44 @@
+// Custom small screen - mobile
+@mixin mobile {
+  @media (max-width: 570px) {
+    @content;
+  }
+}
+
+// Custom medium screen - Tablet
+@mixin tablet {
+  @media (min-width: 571px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile-tablet {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+// Custom large screen - Desktop
+@mixin desktop {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+// Auto Flip For Margin/Padding for handling rtl/ltr updates
+@mixin auto-flip-property($ltrProperty, $ltr-value, $rtl-value, $rtlProperty: $ltrProperty, $restValue: 0) {
+  #{$ltrProperty}: $ltr-value;
+
+  @if $restValue ==1 {
+    [dir=rtl] & {
+      #{$ltrProperty}: $rtl-value;
+      #{$rtlProperty}: $ltr-value;
+    }
+  }
+
+  @else {
+    [dir=rtl] & {
+      #{$rtlProperty}: $rtl-value;
+    }
+  }
+}

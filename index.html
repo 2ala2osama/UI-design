@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/css/style.css">
+  <title>Atypon Task</title>
+</head>
+
+<body onload="document.getElementById('tab').click();">
+  <!-- header -->
+  <section class="header">
+    <div class="header-overlay flex flex--column flex-justify-content--space-between">
+      <div class="container">
+        <div class="header-overlay-bar flex flex-align-items--center flex-justify-content--space-between">
+          <div class="header-overlay-bar-topbar flex flex-align-items--center">
+            <button onclick="navbarResponsive()"
+              class="header-overlay-bar-topbar_menu flex flex-align-items--center flex-justify-content--center">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="header-overlay-bar-topbar-group-button flex">
+              <button
+                class="header-overlay-bar-topbar_language active flex flex-align-items--center flex-justify-content--center">
+                EN
+              </button>
+              <button
+                class="header-overlay-bar-topbar_language flex flex-align-items--center flex-justify-content--center">
+                ع
+              </button>
+            </div>
+          </div>
+
+          <div class="header-overlay-bar-search">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="24" stroke="white" stroke-opacity="0.5" stroke-width="2" />
+              <path
+                d="M29.0104 27.2917H28.0995L27.7844 26.9766C28.9073 25.676 29.5833 23.9859 29.5833 22.1354C29.5833 18.0219 26.249 14.6875 22.1354 14.6875C18.0219 14.6875 14.6875 18.0219 14.6875 22.1354C14.6875 26.249 18.0219 29.5833 22.1354 29.5833C23.9859 29.5833 25.676 28.9073 26.9766 27.7901L27.2917 28.1052V29.0104L33.0208 34.7281L34.7281 33.0208L29.0104 27.2917ZM22.1354 27.2917C19.288 27.2917 16.9792 24.9828 16.9792 22.1354C16.9792 19.288 19.288 16.9792 22.1354 16.9792C24.9828 16.9792 27.2917 19.288 27.2917 22.1354C27.2917 24.9828 24.9828 27.2917 22.1354 27.2917Z"
+                fill="#FAFAFA" />
+            </svg>
+          </div>
+        </div>
+        <hr />
+        <!-- navbar -->
+        <div class="header-overlay-navbar flex flex-justify-content--center topnav container" id="navbar">
+          <a href="#">Healthy Lifestyle</a>
+          <a href="#">Chronic diseases</a>
+          <a href="#">Women’s health</a>
+          <a href="#">mental health</a>
+          <a href="#">MOre <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.7917 3.33333L3.20835 3.33333L7.00002 7.91666L10.7917 3.33333Z" fill="white" />
+            </svg>
+            <span class="divide">|</span></a>
+          <a href="#" class="flex flex-align-items--center flex-justify-content--center" target="_blank">
+            <span>Health Education publications</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.0833 11.0833H2.91667V2.91667H7V1.75H2.91667C2.27208 1.75 1.75 2.27208 1.75 2.91667V11.0833C1.75 11.7279 2.27208 12.25 2.91667 12.25H11.0833C11.7279 12.25 12.25 11.7279 12.25 11.0833V7H11.0833V11.0833ZM8.16667 1.75V2.91667H10.2579L4.52375 8.65083L5.34917 9.47625L11.0833 3.74208V5.83333H12.25V1.75H8.16667Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="header-overlay-content flex  flex--column flex-justify-content--center flex-align-items--start ">
+          <div class="header-overlay-content_label bedget-label bedget-label--red">Healthy Lifestyle</div>
+          <div class="header-overlay-content_desc">
+            Could walking help lower cancer risk?
+          </div>
+        </div>
+        <div class="header-scrollable-btn flex flex-align-items--center flex-justify-content--center">
+          <button onclick="scrollToBottom()">
+            <span class="icon material-symbols-outlined">expand_more</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <div class="developer-details">
+    <div class="about-details-info flex flex-align-items--center">
+      <div class="flex about-details-info-img">
+        <img src="./assets/images/Artboard 2.png" alt="" width="40" height="40">
+        <div class="flex flex--column about-details-info-img__name">
+          <h4>Alaa Ratrout</h4>
+          <p>Software Engineering Manager</p>
+        </div>
+      </div>
+      <ul class="about-details-info-list flex flex-align-items--center">
+        <li class="about-details-info-list_items flex flex-align-items--center">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.3334 2.00002H12.6667V0.666687H11.3334V2.00002H4.66671V0.666687H3.33337V2.00002H2.66671C1.93337 2.00002 1.33337 2.60002 1.33337 3.33335V14C1.33337 14.7334 1.93337 15.3334 2.66671 15.3334H13.3334C14.0667 15.3334 14.6667 14.7334 14.6667 14V3.33335C14.6667 2.60002 14.0667 2.00002 13.3334 2.00002ZM13.3334 14H2.66671V5.33335H13.3334V14Z"
+              fill="white" />
+          </svg>
+
+          <span>November 10,2019,4:30PM</span>
+        </li>
+        <li class="about-details-info-list_items flex flex-align-items--center">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.5555 10.488C11.1051 10.488 10.6992 10.6657 10.3911 10.9518L6.16885 8.4488C6.20144 8.31325 6.22218 8.17169 6.22218 8.02711C6.22218 7.88253 6.20144 7.74096 6.16885 7.60542L10.3466 5.12651C10.6637 5.42771 11.0874 5.61446 11.5555 5.61446C12.5363 5.61446 13.3333 4.80422 13.3333 3.80723C13.3333 2.81024 12.5363 2 11.5555 2C10.5748 2 9.77774 2.81024 9.77774 3.80723C9.77774 3.95181 9.79848 4.09337 9.83107 4.22892L5.65329 6.70783C5.33626 6.40663 4.91255 6.21988 4.4444 6.21988C3.46366 6.21988 2.66663 7.03012 2.66663 8.02711C2.66663 9.0241 3.46366 9.83434 4.4444 9.83434C4.91255 9.83434 5.33626 9.64759 5.65329 9.34639L9.87551 11.8494C9.84588 11.9759 9.82811 12.1084 9.82811 12.244C9.82811 13.2139 10.6014 14 11.5555 14C12.5096 14 13.2829 13.2139 13.2829 12.244C13.2829 11.2741 12.5096 10.488 11.5555 10.488Z"
+              fill="white" />
+          </svg>
+
+          <span>1K shares</span></span>
+        </li>
+        <li class="about-details-info-list_items flex flex-align-items--center"><svg width="16" height="16"
+            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 4C5.27273 4 2.94364 5.65867 2 8C2.94364 10.3413 5.27273 12 8 12C10.73 12 13.0564 10.3413 14 8C13.0564 5.65867 10.73 4 8 4ZM8 10.6667C6.49455 10.6667 5.27273 9.472 5.27273 8C5.27273 6.528 6.49455 5.33333 8 5.33333C9.50545 5.33333 10.7273 6.528 10.7273 8C10.7273 9.472 9.50545 10.6667 8 10.6667ZM8 6.4C7.09727 6.4 6.36364 7.11733 6.36364 8C6.36364 8.88267 7.09727 9.6 8 9.6C8.90273 9.6 9.63636 8.88267 9.63636 8C9.63636 7.11733 8.90273 6.4 8 6.4Z"
+              fill="white" />
+          </svg>
+          <span>5K views</span></span>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <section class="about">
+    <div class="about-box flex">
+      <div class="about-box--left flex flex-align-items--start">
+        <div class="about-box-text">
+          <p><b>Cover Image</b>: A stripy monarch caterpillar (Danaus plexippus) gorges on a butterfly milkweed. Photo
+            by:
+            Sarah Mac Farland</p>
+          <p> <b>Photo by</b>: Sarah Mac Farland</p>
+        </div>
+        <div class="flex flex--column about-box-list">
+          <ul class="about-box-list_items">
+            <li class="icon-k">
+              <span>
+                1K
+                <p>SHARES</p>
+              </span>
+            </li>
+            <li class="icon">
+              <img src="./assets/icons/facebook-color-svgrepo-com.svg" width="20" height="20">
+            </li>
+            <li class="icon">
+              <img src="./assets/icons/blue_twitter.svg" width="20" height="20" alt="">
+            </li>
+            <li class="icon">
+              <img src="./assets/icons/blue_linkedin.svg" width="20" height="20" alt="">
+            </li>
+            <li class="icon">
+              <img src="./assets/images/Reddit-logo.webp" width="20" height="20">
+            </li>
+            <li class="icon">
+              <img src="./assets/icons/message-svgrepo-com (2).svg" width="20" height="20">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="about-box--right">
+        <p class="about-box-content about-box-content__letter">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque
+          sagittis.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut
+          varius
+          ultrices id diam elit amet. Lacinia cursus morbi dui vulputate.
+        </p>
+        <div class="about-box-abstract">
+          <h3 class="about-box-abstract-header head-title">Abstract</h3>
+          <p class="about-box-abstract-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque
+            sagittis.
+            In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet,
+            consectetur
+            adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius
+            ultrices id
+            diam elit amet. Lacinia cursus morbi dui vulputate.
+          </p>
+        </div>
+        <div class="about-box-advertisment">
+          <h5 class="title">ADVERTISMENT</h5>
+          <img class="about-box-advertisment_banner" src="./assets/images/banner.jfif" alt="plchldr.co">
+          <div class="about-box-advertisment-content">
+            <h3 class="about-box-advertisment-content__header head-title">Lorem</h3>
+            <p class="about-box-advertisment-content__text">
+              Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying
+              out print, graphic or web designs. The
+              passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts
+              of
+              Cicero's De
+              Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web
+              designs.
+              Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with
+              The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.)
+              that
+              doesn't distract from the layout.</p>
+          </div>
+          <div class="flex flex--column flex-align-items--center flex-justify-content--center">
+            <img class="about-box-advertisment-img" src="./assets/images/Rectangle 14.png">
+            <i class="about-box-advertisment-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et
+              feugiat auctor mauris nisi, pellentesque sagittis.
+              In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet,
+              consectetur
+              adipiscing elit.
+            </i>
+          </div>
+        </div>
+        <div class="about-box-artical">
+          <h3 class="about-box-artical-header head-title">Ipsum</h3>
+          <p class="about-box-artical-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat
+            auctor mauris nisi, pellentesque sagittis.
+            In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet,
+            consectetur
+            adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius
+            ultrices id
+            diam elit amet. Lacinia cursus morbi dui vulputate.</p>
+          <p class="about-box-artical-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat
+            auctor mauris nisi, pellentesque sagittis.
+            In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet,
+            consectetur
+            adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius
+            ultrices id
+            diam elit amet. Lacinia cursus morbi dui vulputate.</p>
+        </div>
+        <div class="about-box-notes flex flex-align-items--center flex-justify-content--center">
+          <div class="about-box-notes-text">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M42.0056 56.2555C39.5427 55.5762 37.0797 55.2315 34.6839 55.2315C30.9842 55.2315 27.8971 56.0415 25.5034 57.0332C27.8111 48.9403 33.3549 34.9761 44.3983 33.4035C45.4211 33.2578 46.2592 32.5494 46.5382 31.5958L48.9519 23.326C49.1554 22.6266 49.0347 21.878 48.6183 21.2711C48.2019 20.6642 47.5326 20.2592 46.7826 20.1608C45.9676 20.0543 45.1368 20 44.3134 20C31.0576 20 17.9299 33.2538 12.3903 52.2311C9.13851 63.3647 8.185 80.1032 16.1949 90.6389C20.6771 96.5343 27.2163 99.6825 35.6311 99.997C35.6657 99.998 35.6993 99.999 35.7339 99.999C46.1165 99.999 55.3233 93.3008 58.124 83.7116C59.7971 77.979 59.0408 71.9671 55.9925 66.7791C52.9767 61.6494 48.0099 57.9104 42.0056 56.2555Z"
+                fill="#F0F0F0" />
+              <path
+                d="M106.998 66.7801C103.983 61.6494 99.0157 57.9104 93.0115 56.2555C90.5485 55.5762 88.0855 55.2316 85.6907 55.2316C81.991 55.2316 78.9029 56.0415 76.5092 57.0332C78.8169 48.9403 84.3607 34.9761 95.4052 33.4035C96.4279 33.2578 97.265 32.5494 97.5451 31.5958L99.9587 23.326C100.162 22.6266 100.042 21.878 99.6252 21.2711C99.2098 20.6642 98.5405 20.2592 97.7895 20.1608C96.9755 20.0543 96.1447 20 95.3202 20C82.0645 20 68.9367 33.2538 63.3961 52.2311C60.1454 63.3647 59.1918 80.1032 67.2028 90.641C71.6839 96.5353 78.2242 99.6845 86.6379 99.998C86.6726 99.999 86.7061 100 86.7418 100C97.1234 100 106.331 93.3018 109.132 83.7126C110.803 77.98 110.046 71.9671 106.998 66.7801Z"
+                fill="#F0F0F0" />
+            </svg>
+            <p class="about-box-notes-text_qoute"> Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi,
+              pellentesque
+            </p>
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M77.9944 63.7445C80.4573 64.4238 82.9203 64.7685 85.3161 64.7685C89.0158 64.7685 92.1029 63.9586 94.4966 62.9668C92.1889 71.0597 86.6451 85.0239 75.6017 86.5965C74.5789 86.7422 73.7408 87.4506 73.4618 88.4042L71.0481 96.674C70.8446 97.3734 70.9653 98.122 71.3817 98.7289C71.7981 99.3358 72.4674 99.7408 73.2174 99.8392C74.0324 99.9457 74.8632 100 75.6866 100C88.9424 100 102.07 86.7462 107.61 67.7689C110.861 56.6353 111.815 39.8968 103.805 29.3611C99.3229 23.4657 92.7837 20.3175 84.3689 20.003C84.3343 20.002 84.3007 20.001 84.2661 20.001C73.8835 20.001 64.6767 26.6992 61.876 36.2884C60.2029 42.021 60.9592 48.0329 64.0075 53.2209C67.0233 58.3506 71.9901 62.0896 77.9944 63.7445Z"
+                fill="#F0F0F0" />
+              <path
+                d="M13.0017 53.2199C16.0174 58.3506 20.9843 62.0896 26.9885 63.7445C29.4515 64.4238 31.9144 64.7685 34.3092 64.7685C38.0089 64.7685 41.0971 63.9585 43.4908 62.9668C41.1831 71.0597 35.6393 85.0239 24.5948 86.5965C23.5721 86.7422 22.735 87.4506 22.4549 88.4042L20.0412 96.674C19.8377 97.3734 19.9584 98.122 20.3748 98.7289C20.7902 99.3358 21.4594 99.7408 22.2105 99.8392C23.0245 99.9457 23.8553 100 24.6798 100C37.9355 100 51.0633 86.7462 56.6039 67.7689C59.8546 56.6353 60.8081 39.8968 52.7972 29.359C48.316 23.4647 41.7757 20.3155 33.362 20.002C33.3274 20.001 33.2938 20 33.2582 20C22.8766 20 13.6688 26.6982 10.8681 36.2874C9.19707 42.02 9.95442 48.0329 13.0017 53.2199Z"
+                fill="#F0F0F0" />
+            </svg>
+          </div>
+          <div class="about-box-notes-img">
+            <img class="about-box-notes-img_chart" src="./assets/images/charts_7411815 1.png">
+          </div>
+
+        </div>
+        <div class="about-box-conclusion">
+          <h3 class="about-box-conclusion_title head-title">Conclusion</h3>
+          <p class="about-box-conclusion_text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque
+            sagittis.
+            In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet,
+            consectetur
+            adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque sagittis. In pulvinar quam ut varius
+            ultrices id
+            diam elit amet. Lacinia cursus morbi dui vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Feugiat et
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque
+            sagittis.
+            In pulvinar quam ut varius ultrices id diam elit amet. Lacinia cursus morbi dui vulputate.
+          </p>
+        </div>
+
+        <div class="social">
+          <div class="social-content flex">
+            <div class="social-posts">
+              <div class="social-posts-content">
+                <div class="social-posts-header flex flex-align-items--center ">
+                  <div class="social-posts__tags flex">
+                    <div class="bedget-label bedget-label--secondary">Climate</div>
+                    <div class="bedget-label bedget-label--secondary">Healthy</div>
+                    <div class="bedget-label bedget-label--secondary">Wemon</div>
+                  </div>
+                </div>
+
+                <div class="social-content  flex flex-align-items--center flex-justify-content--space-between">
+                  <div class="social-content-post flex flex-align-items--center flex-justify-content--space-between">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <div dir="rtl">
+                      <div class="social-content-post__subtitle">Previous Post</div>
+                      <div class="social-content-post__title">Beautiful and Creative Editing Photos by Egz...</div>
+                    </div>
+                  </div>
+                  <div class="social-content-post  flex flex-align-items--center flex-justify-content--space-between">
+                    <div>
+                      <div class="social-content-post__subtitle">Next Post</div>
+                      <div class="social-content-post__title">Grilling Tips For The Dog Days Of Summer...</div>
+                    </div>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                  </div>
+                </div>
+              </div>
+              <div class="social-auther">
+                <div class="social-auther__title">About The Auther</div>
+              </div>
+              <div class="social-auther-details flex flex-align-items--center">
+                <div class="social-auther__image"></div>
+                <div class="social-auther_info">
+                  <div class="social-auther-header flex flex-align-items--center flex-justify-content--space-between">
+                    <div class="flex flex--column">
+                      <div class="social-auther__name">Alaa Ratrout</div>
+                      <div class="social-auther__postion">Software Engineering Manager</div>
+                    </div>
+                    <div class="social-auther__accounts flex flex-align-items--center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.931 1.33325H2.06895C1.87384 1.33325 1.68673 1.41076 1.54877 1.54871C1.41082 1.68667 1.33331 1.87378 1.33331 2.06888L1.33331 13.931C1.33331 14.1261 1.41082 14.3132 1.54877 14.4511C1.68673 14.5891 1.87384 14.6666 2.06895 14.6666H8.45975V9.51026H6.72412V7.49187H8.45975V6.00682C8.45975 4.28498 9.51262 3.34705 11.0483 3.34705C11.5657 3.34592 12.0829 3.37201 12.5977 3.42521V5.22521H11.5402C10.7034 5.22521 10.5402 5.62061 10.5402 6.20452V7.48957H12.5402L12.2804 9.50797H10.5287V14.6666H13.931C14.1261 14.6666 14.3132 14.5891 14.4512 14.4511C14.5891 14.3132 14.6666 14.1261 14.6666 13.931V2.06888C14.6666 1.87378 14.5891 1.68667 14.4512 1.54871C14.3132 1.41076 14.1261 1.33325 13.931 1.33325V1.33325Z"
+                          fill="#707070" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4.53331 2.92617C4.53331 3.3244 4.39998 3.72263 3.99998 4.12086C3.59998 4.51909 3.33331 4.51909 2.93331 4.51909C2.53331 4.51909 2.13331 4.38635 1.86665 4.12086C1.59998 3.85538 1.33331 3.3244 1.33331 2.92617C1.33331 2.52794 1.46665 2.12971 1.86665 1.73148C2.26665 1.33325 2.53331 1.33325 2.93331 1.33325C3.33331 1.33325 3.73331 1.466 4.13331 1.86423C4.53331 2.26246 4.53331 2.52794 4.53331 2.92617ZM4.53331 5.84653V14.2094C4.53331 14.3421 4.53331 14.3421 4.39998 14.4748C4.26665 14.6076 4.26665 14.6076 4.13331 14.6076H1.73331C1.59998 14.6076 1.59998 14.6076 1.46665 14.4748C1.33331 14.3421 1.46665 14.3421 1.46665 14.2094V5.84653C1.46665 5.71378 1.46665 5.71378 1.59998 5.58104C1.73331 5.4483 1.73331 5.4483 1.86665 5.4483H4.26665C4.39998 5.4483 4.39998 5.4483 4.53331 5.58104C4.66665 5.71378 4.53331 5.71378 4.53331 5.84653ZM11.3333 8.10316C11.2 7.97042 10.8 7.83768 10.4 7.83768C9.86665 7.83768 9.46665 7.97042 9.19998 8.23591C8.93331 8.50139 8.79998 9.16511 8.79998 9.69608V14.2094C8.79998 14.3421 8.79998 14.3421 8.66665 14.4748C8.53331 14.6076 8.53331 14.6076 8.53331 14.6076H6.13331C5.99998 14.6076 5.99998 14.6076 5.86665 14.4748C5.73331 14.3421 5.73331 14.3421 5.73331 14.2094V5.84653C5.73331 5.71378 5.73331 5.71378 5.86665 5.58104C5.99998 5.4483 5.99998 5.4483 6.13331 5.4483H8.39998C8.53331 5.4483 8.53331 5.4483 8.66665 5.4483C8.79998 5.4483 8.79998 5.58104 8.79998 5.58104C8.79998 5.71378 8.79998 5.71378 8.79998 5.71378C8.79998 5.71378 8.79998 5.84653 8.79998 5.97927C9.33331 5.58104 10.1333 5.31555 11.2 5.31555C12.2666 5.31555 13.2 5.58104 13.7333 6.11201C14.2666 6.64299 14.6666 7.43945 14.6666 8.63414V14.3421C14.6666 14.4748 14.6666 14.4748 14.5333 14.6076C14.4 14.7403 14.4 14.6076 14.4 14.6076H11.8666C11.7333 14.6076 11.7333 14.6076 11.6 14.4748C11.4666 14.3421 11.6 14.3421 11.6 14.2094V9.16511C11.6 8.63414 11.4666 8.36865 11.3333 8.10316Z"
+                          fill="#707070" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.3333 4.96296C13.3333 5.11111 13.3333 5.25926 13.3333 5.40741C13.3333 6.44444 13.0666 7.48148 12.8 8.37037C12.5333 9.25926 12 10.2963 11.3333 11.1852C10.6666 12.0741 9.86665 12.6667 8.79998 13.2593C7.73331 13.8519 6.66665 14 5.46665 14C3.99998 14 2.66665 13.5556 1.33331 12.6667C1.59998 12.6667 1.73331 12.6667 1.99998 12.6667C3.33331 12.6667 4.39998 12.2222 5.46665 11.3333C4.79998 11.3333 4.26665 11.037 3.86665 10.7407C3.46665 10.4444 3.06665 9.85185 2.93331 9.25926C3.06665 9.25926 3.19998 9.25926 3.46665 9.25926C3.73331 9.25926 3.99998 9.25926 4.13331 9.11111C3.46665 9.11111 2.93331 8.66667 2.53331 8.22222C2.13331 7.77778 1.86665 7.03704 1.86665 6.2963C2.26665 6.44444 2.66665 6.59259 3.06665 6.59259C2.26665 6 1.86665 5.11111 1.86665 4.07407C1.86665 3.48148 1.99998 3.03704 2.26665 2.59259C2.93331 3.48148 3.73331 4.22222 4.79998 4.81481C5.86665 5.40741 6.79998 5.7037 7.99998 5.7037C7.99998 5.40741 7.99998 5.25926 7.99998 4.96296C7.99998 4.07407 8.26665 3.48148 8.79998 2.88889C9.33331 2.2963 9.86665 2 10.5333 2C11.3333 2 12 2.2963 12.5333 2.88889C13.2 2.74074 13.7333 2.44444 14.2666 2.14815C14.1333 2.88889 13.7333 3.48148 13.0666 3.92593C13.6 3.77778 14.1333 3.62963 14.6666 3.48148C14.2666 4.07407 13.8666 4.51852 13.3333 4.96296Z"
+                          fill="#707070" />
+                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15.025 4.33557C14.8584 3.6818 14.3584 3.16567 13.725 2.98503C12.5834 2.66675 8.00002 2.66675 8.00002 2.66675C8.00002 2.66675 3.41669 2.66675 2.26669 2.98503C1.63335 3.15707 1.14169 3.6732 0.966687 4.33557C0.666687 5.52266 0.666687 8.00008 0.666687 8.00008C0.666687 8.00008 0.666687 10.4775 0.97502 11.6646C1.14169 12.3184 1.64169 12.8345 2.27502 13.0151C3.41669 13.3334 8.00002 13.3334 8.00002 13.3334C8.00002 13.3334 12.5834 13.3334 13.7334 13.0151C14.3667 12.8431 14.8584 12.327 15.0334 11.6646C15.3334 10.4775 15.3334 8.00008 15.3334 8.00008C15.3334 8.00008 15.3334 5.52266 15.025 4.33557ZM6.50002 10.2538V5.74632L10.3334 8.00008L6.50002 10.2538Z"
+                          fill="#707070" />
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="social-auther__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi,
+                    pellentesque sagittis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-details">
+      <div class="about-details-info about-details-info-lg flex flex--column">
+        <h4 class="about-details-info_title">About</h4>
+        <div class="flex about-details-info-img">
+          <img src="./assets/images/image 16.png" alt="" width="40" height="40">
+          <div class="flex flex--column about-details-info-img__name">
+            <h4>Alaa Ratrout</h4>
+            <p>Software Engineering Manager</p>
+          </div>
+        </div>
+        <ul class="about-details-info-list">
+          <li class="about-details-info-list_items flex">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.3334 2.00002H12.6667V0.666687H11.3334V2.00002H4.66671V0.666687H3.33337V2.00002H2.66671C1.93337 2.00002 1.33337 2.60002 1.33337 3.33335V14C1.33337 14.7334 1.93337 15.3334 2.66671 15.3334H13.3334C14.0667 15.3334 14.6667 14.7334 14.6667 14V3.33335C14.6667 2.60002 14.0667 2.00002 13.3334 2.00002ZM13.3334 14H2.66671V5.33335H13.3334V14Z"
+                fill="white" />
+            </svg>
+
+            <span>November 10,2019,4:30PM</span>
+          </li>
+          <li class="about-details-info-list_items flex">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.5555 10.488C11.1051 10.488 10.6992 10.6657 10.3911 10.9518L6.16885 8.4488C6.20144 8.31325 6.22218 8.17169 6.22218 8.02711C6.22218 7.88253 6.20144 7.74096 6.16885 7.60542L10.3466 5.12651C10.6637 5.42771 11.0874 5.61446 11.5555 5.61446C12.5363 5.61446 13.3333 4.80422 13.3333 3.80723C13.3333 2.81024 12.5363 2 11.5555 2C10.5748 2 9.77774 2.81024 9.77774 3.80723C9.77774 3.95181 9.79848 4.09337 9.83107 4.22892L5.65329 6.70783C5.33626 6.40663 4.91255 6.21988 4.4444 6.21988C3.46366 6.21988 2.66663 7.03012 2.66663 8.02711C2.66663 9.0241 3.46366 9.83434 4.4444 9.83434C4.91255 9.83434 5.33626 9.64759 5.65329 9.34639L9.87551 11.8494C9.84588 11.9759 9.82811 12.1084 9.82811 12.244C9.82811 13.2139 10.6014 14 11.5555 14C12.5096 14 13.2829 13.2139 13.2829 12.244C13.2829 11.2741 12.5096 10.488 11.5555 10.488Z"
+                fill="white" />
+            </svg>
+
+            <span>1K shares</span></span>
+          </li>
+          <li class="about-details-info-list_items flex">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8 4C5.27273 4 2.94364 5.65867 2 8C2.94364 10.3413 5.27273 12 8 12C10.73 12 13.0564 10.3413 14 8C13.0564 5.65867 10.73 4 8 4ZM8 10.6667C6.49455 10.6667 5.27273 9.472 5.27273 8C5.27273 6.528 6.49455 5.33333 8 5.33333C9.50545 5.33333 10.7273 6.528 10.7273 8C10.7273 9.472 9.50545 10.6667 8 10.6667ZM8 6.4C7.09727 6.4 6.36364 7.11733 6.36364 8C6.36364 8.88267 7.09727 9.6 8 9.6C8.90273 9.6 9.63636 8.88267 9.63636 8C9.63636 7.11733 8.90273 6.4 8 6.4Z"
+                fill="white" />
+            </svg>
+            <span>5K views</span></span>
+          </li>
+        </ul>
+      </div>
+      <div class="about-details-advertisment">
+        <div class="title"> ADVERTISMENT</div>
+        <div class="about-details-advertisment-img">
+          <img src="https://placehold.co/300x250" alt="advertisment">
+        </div>
+      </div>
+
+      <div class="flex flex--column flex-align-items--center about-details-email">
+        <div class="about-details-email-section">
+          <div class="flex flex-align-items--center about-details-email-section-newsletter">
+            <svg width="49" height="43" viewBox="0 0 49 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.2" clip-path="url(#clip0_401_5810)">
+                <path
+                  d="M44.5656 9.67246L12.4784 1.07472C10.2724 0.483623 7.99123 1.77756 7.40909 3.95013L1.05849 27.6509C0.47635 29.8235 1.80496 32.0847 4.01096 32.6758L36.0982 41.2735C38.3042 41.8646 40.5854 40.5707 41.1675 38.3981L47.5181 14.6973C48.1003 12.5247 46.7716 10.2636 44.5656 9.67246ZM37.1566 37.3234L5.06939 28.7256L10.3616 8.97498L23.7591 23.1492L42.4488 17.5727L37.1566 37.3234ZM24.8175 19.199L11.42 5.02485L43.5072 13.6226L24.8175 19.199Z"
+                  fill="#707070" />
+              </g>
+              <defs>
+                <clipPath id="clip0_401_5810">
+                  <rect width="41.5239" height="32.7158" fill="white" transform="translate(8.46753) rotate(15)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <div class="about-details-email-section-newsletter_text">
+              <p> Subscribe to our </p>
+              <h4> Newsletter </h4>
+            </div>
+          </div>
+          <div class="about-details-email-section-input">
+            <h4>No Spam , notification only about new product, update</h4>
+            <div class="about-details-email-section-input_input flex flex--column">
+              <div>
+                <img src="./assets/images/icons8-message-48.png" width="23" height="23">
+                <input type="text" placeholder="Enter your email here">
+              </div>
+              <button class="about-details-email-section-input_button">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tabs">
+        <div class="tab flex flex-align-items--center flex-justify-content--center">
+          <button class="tab-links" onclick="Tabs(event, 'tab-1')" id="tab">TRINDING</button>
+          <button class="tab-links" onclick="Tabs(event, 'tab-2')">PAPULAR</button>
+          <button class="tab-links" onclick="Tabs(event, 'tab-3')">LASTEST</button>
+        </div>
+        <div id="tab-1" class="tab-content"></div>
+        <div id="tab-2" class="tab-content"></div>
+        <div id="tab-3" class="tab-content"></div>
+      </div>
+      <div class="text-section">
+        <h3 class="text-section_title">About KFSH&RC</h3>
+        <p class="text-section_desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat et feugiat auctor mauris nisi, pellentesque
+          sagittis.
+          In pulvinar quam ut varius ultrices id diam elit amet. Lacinia Feugiat et Lorem ipsum dolor sit amet,
+          consectetur
+          adipiscing elit. Feugiat et feugiat auctor mauris nisi.
+        </p>
+
+
+      </div>
+      <div class="social-accounts">
+        <div class="social-accounts_title">Follow Us</div>
+        <div class="social-accounts-container  flex flex-align-items--center">
+          <div
+            class="social-accounts-account social-accounts-account--facebook flex flex-align-items--center flex-justify-content--center">
+            <img src="./assets/icons/white_facebook.svg" alt="">
+          </div>
+          <div
+            class="social-accounts-account social-accounts-account--twitter flex flex-align-items--center flex-justify-content--center">
+            <img src="./assets/icons/white_twitter.svg" alt="">
+          </div>
+          <div
+            class="social-accounts-account social-accounts-account--linkedin flex flex-align-items--center flex-justify-content--center">
+            <img src="./assets/icons/white_linkedin.svg" alt="">
+          </div>
+          <div
+            class="social-accounts-account social-accounts-account--youtube flex flex-align-items--center flex-justify-content--center">
+            <img src="./assets/icons/white_youtube.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="tags-section">
+        <h3 class="tags-section_title">TAGS</h3>
+        <div id="tags" class="tags-section_tags"></div>
+      </div>
+    </div>
+
+  </section>
+  <section class="footer">
+    <div class="container">
+      <h3 class="footer_tilte">Related Posts</h3>
+      <div id="va_container">
+        <div class="footer-cards-container ">
+          <div class="footer-card">
+            <div class="footer-card__image"></div>
+            <div class="footer-card-content">
+              <h4 class="footer-card__title">Smarter Food Choices 101 Tips For Busy Women</h4>
+              <div class="footer-card__details">
+                <div class="bedget-label bedget-label--red">Healthy Lifestyle</div>
+                <span>By Lorem ipsumipsum</span>
+                <span>Posted: 15 June 2019</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-card">
+            <div class="footer-card__image"></div>
+            <div class="footer-card-content">
+              <h4 class="footer-card__title">Smarter Food Choices 101 Tips For Busy Women</h4>
+              <div class="footer-card__details">
+                <div class="bedget-label bedget-label--red">Healthy Lifestyle</div>
+                <span>By Lorem ipsumipsum</span>
+                <span>Posted: 15 June 2019</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-card">
+            <div class="footer-card__image"></div>
+            <div class="footer-card-content">
+              <h4 class="footer-card__title">Smarter Food Choices 101 Tips For Busy Women</h4>
+              <div class="footer-card__details">
+                <div class="bedget-label bedget-label--red">Healthy Lifestyle</div>
+                <span>By Lorem ipsumipsum</span>
+                <span>Posted: 15 June 2019</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-card">
+            <div class="footer-card__image"></div>
+            <div class="footer-card-content">
+              <h4 class="footer-card__title">Smarter Food Choices 101 Tips For Busy Women</h4>
+              <div class="footer-card__details">
+                <div class="bedget-label bedget-label--red">Healthy Lifestyle</div>
+                <span>By Lorem ipsumipsum</span>
+                <span>Posted: 15 June 2019</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-slider-butttons flex flex-align-items--center flex-justify-content--space-between">
+          <button class="footer-slider__previous flex flex-align-items--center flex-justify-content--center">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button class="footer-slider__next flex flex-align-items--center flex-justify-content--center">
+            <span class="material-symbols-outlined">navigate_next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="footer-navbar">
+    <div class="footer-scrollable-btn flex flex-align-items--center flex-justify-content--end">
+      <button onclick="scrollToTop()" class="flex flex-align-items--center flex-justify-content--center">
+        <span class="icon material-symbols-outlined">
+          expand_less
+        </span>
+      </button>
+    </div>
+    <div class="flex flex--column flex-align-items--center flex-justify-content--center">
+      <div class="footer-navbar flex flex-align-items--center flex-justify-content--center">
+        <a class="footer-navbar__link" href="#">About</a>
+        <a class="footer-navbar__link" href="#">Acknowledgement</a>
+        <a class="footer-navbar__link" href="#">News</a>
+        <a class="footer-navbar__link" href="#">Videos</a>
+        <a class="footer-navbar__link" href="#">Contact Us</a>
+      </div>
+      <div class="footer-copyright">
+        Atypon &copy; 2023 copyright
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/tabs.js"></script>
+  <script src="./scripts/tags.js"></script>
+</body>
+
+</html>

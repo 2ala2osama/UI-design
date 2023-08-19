@@ -1,0 +1,250 @@
+@import "./variables";
+
+.social {
+  margin-top: 40px;
+
+  &-posts,
+  &-accounts {
+    flex: 0 0 auto;
+  }
+
+  &-posts-list,
+  &-accounts__title,
+  &__title {
+    font-weight: 700;
+    font-family: $noto_font;
+    text-transform: uppercase;
+  }
+
+  &-posts {
+    width: 100%;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    &-list {
+      cursor: pointer;
+      padding: 14px 0;
+    }
+
+    &-content {
+      margin: 24px 0;
+      padding: 10px 22px;
+      border-bottom: 1px solid $border;
+
+      @include mobile {
+        margin: 24px 14px;
+      }
+
+      .bedget-label {
+        margin-inline: 4px;
+      }
+    }
+
+  }
+
+  &-content {
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+    }
+
+    &-post {
+      border-radius: 4px;
+      border: 1px solid $border;
+      padding: 18px 32px 18px 22px;
+      background: $white_100;
+      font-family: $mont_font;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      margin-block: 28px;
+
+      @include tablet {
+        margin-inline-end: 20px;
+      }
+
+      &:first-of-type {
+        @include mobile {
+          margin: 40px 0 0 0;
+        }
+      }
+
+      &__subtitle {
+        color: #707070;
+        text-transform: uppercase;
+        font-size: 10px;
+        margin-top: 2px;
+      }
+
+      &__title {
+        color: $base_black;
+      }
+    }
+  }
+
+  &-auther {
+    font-family: $mont_font;
+    line-height: 24px;
+    font-weight: 700;
+
+    &-details {
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid $border;
+        margin-inline: 16px;
+      }
+    }
+
+    &__image {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("./../../assets/images/Artboard\ 2.png");
+      width: 15rem;
+      height: 10rem;  
+      margin: 24px 19px 24px 40px;
+      border-radius: 50%;
+
+      @include tablet {
+        width: 9rem;
+        height: 7rem;
+      }
+
+      @include mobile {
+        width: 10rem;
+        height: 10rem;
+      }
+
+    }
+
+    &__title {
+      font-size: 20px;
+      color: #000;
+      margin: 40px 26px 0;
+
+      @include tablet {
+        margin: 40px 0 24px 52px;
+      }
+    }
+
+    &_info {
+      width: 100%;
+
+      @include mobile {
+        margin-inline-start: unset;
+        padding: 0;
+      }
+    }
+
+    &-header {
+      @include mobile {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+
+    &__accounts {
+      padding-inline-end: 20px;
+
+      @include mobile {
+        margin-top: 16px;
+      }
+
+      svg {
+        width: 28px;
+        height: px;
+        padding-inline: 5px;
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(1) {
+          border-right: 1px solid #707070;
+        }
+      }
+
+    }
+
+    &__postion {
+      color: #707070;
+      font-size: 12px;
+    }
+
+    &__desc {
+      font-size: 14px;
+      font-family: $mont_font;
+      font-weight: 400;
+      line-height: 22px;
+      margin-top: 16px;
+      padding: 0 10px 0 0;
+
+      @include mobile {
+        padding-bottom: 16px;
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+      color: $base_black;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.social-accounts {
+  font-weight: 700;
+
+  @include mobile-tablet {
+    display: none;
+  }
+
+  &-container {
+    margin-top: 8px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &-account {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    &:not(:last-of-type) {
+      margin-inline-end: 16px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--facebook {
+      background-color: #385997;
+    }
+
+
+    &--twitter {
+      background-color: #1da1f2;
+    }
+
+    &--linkedin {
+      background-color: #007EBB;
+    }
+
+    &--youtube {
+      background-color: #ed1f24;
+    }
+  }
+}
